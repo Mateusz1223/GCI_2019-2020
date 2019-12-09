@@ -1,0 +1,6 @@
+fantastic
+password
+test
+password with spaces
+sample hash
+hash
