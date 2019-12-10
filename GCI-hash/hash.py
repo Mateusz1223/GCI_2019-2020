@@ -67,17 +67,18 @@ def crack():
 
 	while(True):
 		password = passList.readline()
-		if password[len(password)-1] == '\n':
-			password = password[:-1]
 
 		if password == "":
 			break
-		else:
-			passHash = hashFunc(password.encode())
-			if hashString == passHash.hexdigest():
-				print(textColors.SUCCES+'Succes! Found: ' + hashString + ' = "' + password + '" ('+hashType+')\n'+textColors.END)
-				passList.close()
-				main()
+
+		if password[len(password)-1] == '\n':
+			password = password[:-1]
+
+		passHash = hashFunc(password.encode())
+		if hashString == passHash.hexdigest():
+			print(textColors.SUCCES+'Succes! Found: ' + hashString + ' = "' + password + '" ('+hashType+')\n'+textColors.END)
+			passList.close()
+			main()
 
 	print(textColors.ERROR+"Failure. Hash hasn't been found in "+passListName+'\n'+textColors.END)
 	main()
