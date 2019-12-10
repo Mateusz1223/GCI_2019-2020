@@ -1,6 +1,6 @@
 # hash
 
-Tool that hashes strings and crack hashes. Supports md5, sha1, sha224, sha256, sha384, sha512.
+Tool which hashes strings and crack hashes. Supports md5, sha1, sha224, sha256, sha384, sha512.
 
 ### Usage
 
